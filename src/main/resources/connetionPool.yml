@@ -1,0 +1,16 @@
+spring:
+  druid:
+    connectionProperties: "druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000"
+    filters: "stat,wall,log4j"
+    initialSize: 5
+    maxActive: 20
+    maxPoolPreparedStatementPerConnectionSize: 20
+    maxWait: 60000
+    minEvictableIdleTimeMillis: 300000
+    minIdle: 5
+    poolPreparedStatements: true
+    testOnBorrow: false
+    testOnReturn: false
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    validationQuery: "SELECT 1 FROM DUAL"
